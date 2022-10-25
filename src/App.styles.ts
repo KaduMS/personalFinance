@@ -1,9 +1,11 @@
 import styled from "styled-components";
 
-export const Container = styled.div``;
+export const Container = styled.div`
+  font-family: 'Inter', sans-serif;
+`;
 
 export const Header = styled.div`
-  background-color: darkblue;
+  background-color: #7F3DFF;
   height: 150px;
   text-align: center;
 `;
@@ -14,7 +16,7 @@ export const HeaderText = styled.div`
   color: #fff;
   padding-top: 30px;
   font-size: 32px;
-  font-weight: 600;
+  font-weight: 700;
 `;
 
 export const Body = styled.div`
