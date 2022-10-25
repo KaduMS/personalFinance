@@ -13,6 +13,8 @@ export const HeaderText = styled.div`
   padding: 0;
   color: #fff;
   padding-top: 30px;
+  font-size: 32px;
+  font-weight: 600;
 `;
 
 export const Body = styled.div`
