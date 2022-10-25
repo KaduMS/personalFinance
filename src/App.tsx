@@ -26,7 +26,7 @@ const App = () => {
 
         {/* Area de inserção*/}
 
-        <TableArea /> {/*to do */}
+        <TableArea list={filteredList} /> {/*to do */}
       </C.Body>
     </C.Container>
   );
