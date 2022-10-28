@@ -4,8 +4,9 @@ import * as C from "./styles";
 
 type Props = {
   list: Item[];
+  onRemove: (index: number) => void;
 };
-export const TableArea = ({ list }: Props) => {
+export const TableArea = ({ list, onRemove }: Props) => {
 
   return (
     <C.Table>
@@ -22,6 +23,7 @@ export const TableArea = ({ list }: Props) => {
         {list.map((item, index) => (
           <>
             <TableItem key={index} item={item} />
+            <span onClick={() => onRemove(index)}>Excluir</span>
           </>
         ))}
       </tbody>

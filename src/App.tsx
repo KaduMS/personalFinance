@@ -46,6 +46,15 @@ const App = () => {
     setOpenTableArea(true);
   };
 
+  const handleRemoveItem = (index: number) => {
+    let newListR = [...list];
+    newListR.splice(index, 1);
+    setList(newListR);
+    if (newListR.length <= 0) {
+      setOpenTableArea(false);
+    }
+  };
+
   console.log({ filteredList });
 
   return (
@@ -65,7 +74,7 @@ const App = () => {
         <InputArea onAdd={handleAddItem} />
 
         {openTableArea && (
-          <TableArea list={filteredList} />
+          <TableArea list={filteredList} onRemove={handleRemoveItem} />
         )}
       </C.Body>
     </C.Container>
