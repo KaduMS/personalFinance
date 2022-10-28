@@ -13,6 +13,7 @@ const App = () => {
   const [currentMonth, setCurrentMonth] = useState(getCurrentMonth());
   const [income, setIncome] = useState(0);
   const [expense, setExpense] = useState(0);
+  const [openTableArea, setOpenTableArea] = useState(false);
 
   useEffect(() => {
     setFilteredList(filterListByMonth(list, currentMonth));
@@ -42,7 +43,11 @@ const App = () => {
     let newList = [...list];
     newList.push(item);
     setList(newList);
-  }
+    setOpenTableArea(true);
+  };
+
+  console.log({ filteredList });
+
   return (
     <C.Container>
       <C.Header>
@@ -59,7 +64,9 @@ const App = () => {
         {/* Area de inserção*/}
         <InputArea onAdd={handleAddItem} />
 
-        <TableArea list={filteredList} />
+        {openTableArea && (
+          <TableArea list={filteredList} />
+        )}
       </C.Body>
     </C.Container>
   );

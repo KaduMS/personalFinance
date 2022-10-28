@@ -6,6 +6,7 @@ type Props = {
   list: Item[];
 };
 export const TableArea = ({ list }: Props) => {
+
   return (
     <C.Table>
       <thead>
@@ -19,7 +20,9 @@ export const TableArea = ({ list }: Props) => {
       </thead>
       <tbody>
         {list.map((item, index) => (
-          <TableItem key={index} item={item} />
+          <>
+            <TableItem key={index} item={item} />
+          </>
         ))}
       </tbody>
     </C.Table>
