@@ -57,6 +57,7 @@ export const InputArea = ({ onAdd }: Props) => {
         <C.Input
           type="date"
           className="dateItem"
+          value={dateField}
           onChange={(e) => setDateField(e.target.value)}
         />
       </C.InputField>
@@ -65,6 +66,7 @@ export const InputArea = ({ onAdd }: Props) => {
         <C.InputTitle>Categoria</C.InputTitle>
         <C.Select
           className="catoryItem"
+          value={categoryField}
           onChange={(e) => setCategoryField(e.target.value)}
         >
           <>
@@ -83,6 +85,7 @@ export const InputArea = ({ onAdd }: Props) => {
         <C.Input
           type="text"
           className="titleItem"
+          value={titleField}
           onChange={(e) => setTitleField(e.target.value)}
         />
       </C.InputField>
@@ -92,7 +95,8 @@ export const InputArea = ({ onAdd }: Props) => {
         <C.Input
           type="text"
           className="valueItem"
-          onChange={(e) => setValueField(parseFloat((e.target.value)))}
+          value={valueField}
+          onChange={(e) => setValueField(parseFloat(e.target.value))}
         />
       </C.InputField>
 
