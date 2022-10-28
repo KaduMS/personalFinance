@@ -22,7 +22,7 @@ export const Input = styled.input`
   width: 100%;
   height: 30px;
   padding: 0 5px;
-  border: 1px solid lightblue;
+  border: 1px solid #a77ef7;
   border-radius: 5px;
 `;
 
@@ -30,7 +30,7 @@ export const Select = styled.select`
   width: 100%;
   height: 30px;
   padding: 0 5px;
-  border: 1px solid lightblue;
+  border: 1px solid #a77ef7;
   border-radius: 5px;
 `;
 
@@ -40,14 +40,17 @@ export const Button = styled.button`
   margin:auto;
   display: block;
   padding: 0 5px;
-  border: 1px solid lightblue;
+  border: 1px solid #7F3DFF;
   border-radius: 5px;
-  background-color: lightblue;
-  color: black;
+  background-color: #7F3DFF;
+  color: white;
+  font-weight: bold;
   cursor: pointer;
 
   &:hover {
-    background-color: blue;
-    color: white;
+    transition: all 0.6s;
+    border: 1px solid #3a04a3;
+    background-color: #3a04a3;
+  
   }
 `;
